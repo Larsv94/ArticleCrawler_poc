@@ -11,16 +11,23 @@ namespace ArticleCrawler_poc
         static void Main(string[] args)
         {
 
-
+            OnBeforeQuit += Test;
             BeforeQuit();
+        }
+
+        private static void Test()
+        {
+            Console.WriteLine("Please enter your name so we can say hi");
+            var yourWonderFullName = Console.ReadLine();
+            Console.WriteLine($"Hi {yourWonderFullName}, you glorious Basterd");
         }
 
         private static void BeforeQuit()
         {
-            OnBeforeQuit();
-            Console.WriteLine("Press enter to complete...");
-            Console.ReadLine();
-            OnQuit();
+            OnBeforeQuit?.Invoke();
+            Console.WriteLine("Press a key to complete...");
+            Console.ReadKey();
+            OnQuit?.Invoke();
         }
     }
 }
