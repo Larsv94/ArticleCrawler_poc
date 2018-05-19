@@ -6,5 +6,12 @@ namespace ArticleCrawler_poc
 {
     class Crawler
     {
+        
+        public Crawler()
+        {
+
+        }
+
+
     }
 }
