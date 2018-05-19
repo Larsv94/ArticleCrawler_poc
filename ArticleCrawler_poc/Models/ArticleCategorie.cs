@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ArticleCrawler_poc.Models
 {
-    class ArticleCategorie
+    public class ArticleCategorie
     {
         public int ArticleCategorieID { get; set; }
 

@@ -12,9 +12,22 @@ namespace ArticleCrawler_poc.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ArticleID { get; set; }
 
-        [Index]
+        [Index(IsUnique =true)]
         public string Title { get; set; }
+
+        public string Text { get; set; }
+        public string Abstract { get; set; }
+
+
+
         public DateTime PublishedOn { get; set; }
+
+        
+
+        public virtual ICollection<ArticleCategorie> Categories { get; set; }
+        public virtual Writer Writer { get; set; }
+        public virtual ExternalLink Links { get; set; }
+        public virtual GenerationInfo GenerationInfo { get; set; }
 
     }
 }
