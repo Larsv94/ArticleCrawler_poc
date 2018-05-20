@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ArticleCrawler_poc.Models
 {
-    public class Article
+    public partial class Article
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

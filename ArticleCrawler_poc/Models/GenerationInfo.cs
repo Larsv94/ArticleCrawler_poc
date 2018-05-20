@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ArticleCrawler_poc.Models
 {
     [ComplexType]
-    public class GenerationInfo
+    public partial class GenerationInfo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedOn { get; set; }

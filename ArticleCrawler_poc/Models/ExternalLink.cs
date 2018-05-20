@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ArticleCrawler_poc.Models
 {
-    public class ExternalLink
+    public partial class ExternalLink
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
