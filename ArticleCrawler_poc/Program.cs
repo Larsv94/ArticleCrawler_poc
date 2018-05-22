@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ArticleCrawler_poc.Objects;
+using HtmlAgilityPack;
+using System;
+using System.Linq;
 
 namespace ArticleCrawler_poc
 {
@@ -10,8 +13,8 @@ namespace ArticleCrawler_poc
 
         static void Main(string[] args)
         {
-
-            OnBeforeQuit += Test;
+            Crawler crawler = new Crawler();
+            crawler.StartCrawling(100);
             BeforeQuit();
         }
 
